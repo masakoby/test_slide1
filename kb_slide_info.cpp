@@ -1,5 +1,6 @@
 #include "kb_slide_info.h"
-#include "kb_xml_io.h"
+//#include "kb_xml_io.h"
+#include <iostream>
 
 void kb::slide_info::pixel2micrometer(int x1, int y1, double& x2, double& y2)
 {
@@ -16,25 +17,25 @@ void kb::slide_info::micrometer2pixel(double x1, double y1, int& x2, int& y2)
 
 int kb::slide_info::load(std::string& path_xml)
 {
-	kb::read_space_xml(path_xml, "slide_info", "mpp", m_mpp, 2);
-	kb::read_space_xml(path_xml, "slide_info", "offset", m_offset, 2);
-	kb::read_xml(path_xml, "slide_info", "mag", m_mag);
-	kb::read_xml(path_xml, "slide_info", "unit", m_unit);
-	kb::read_space_xml(path_xml, "slide_info", "size", m_sz, 2);
-	kb::read_xml(path_xml, "slide_info", "level_count", m_level_count);
-	kb::read_xml(path_xml, "slide_info", "vendor", m_vendor);
+	//kb::read_space_xml(path_xml, "slide_info", "mpp", m_mpp, 2);
+	//kb::read_space_xml(path_xml, "slide_info", "offset", m_offset, 2);
+	//kb::read_xml(path_xml, "slide_info", "mag", m_mag);
+	//kb::read_xml(path_xml, "slide_info", "unit", m_unit);
+	//kb::read_space_xml(path_xml, "slide_info", "size", m_sz, 2);
+	//kb::read_xml(path_xml, "slide_info", "level_count", m_level_count);
+	//kb::read_xml(path_xml, "slide_info", "vendor", m_vendor);
 	return 0;
 }
 
 int kb::slide_info::save(std::string& path_xml)
 {
-	kb::write_space_xml(path_xml, "slide_info", "mpp", m_mpp, 2);
-	kb::write_space_xml(path_xml, "slide_info", "offset", m_offset, 2);
-	kb::write_xml(path_xml, "slide_info", "mag", m_mag);
-	kb::write_xml(path_xml, "slide_info", "unit", m_unit);
-	kb::write_space_xml(path_xml, "slide_info", "size", m_sz, 2);
-	kb::write_xml(path_xml, "slide_info", "level_count", m_level_count);
-	kb::write_xml(path_xml, "slide_info", "vendor", m_vendor);
+	//kb::write_space_xml(path_xml, "slide_info", "mpp", m_mpp, 2);
+	//kb::write_space_xml(path_xml, "slide_info", "offset", m_offset, 2);
+	//kb::write_xml(path_xml, "slide_info", "mag", m_mag);
+	//kb::write_xml(path_xml, "slide_info", "unit", m_unit);
+	//kb::write_space_xml(path_xml, "slide_info", "size", m_sz, 2);
+	//kb::write_xml(path_xml, "slide_info", "level_count", m_level_count);
+	//kb::write_xml(path_xml, "slide_info", "vendor", m_vendor);
 
 	return 0;
 }
